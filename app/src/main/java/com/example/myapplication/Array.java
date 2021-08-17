@@ -17,6 +17,7 @@ public class Array {
      */
     /**
      * 双指针法,针对排序好的
+     *
      */
     public int removeSame(int[] nums){
         if (nums.length == 0){

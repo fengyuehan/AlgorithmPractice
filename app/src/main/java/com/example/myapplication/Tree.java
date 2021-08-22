@@ -48,6 +48,7 @@ public class Tree {
                 node.getRight().setDeep(node.getDeep() + 1);
                 queue.offer(node.getRight());
             }
+
         }
         return 0;
     }

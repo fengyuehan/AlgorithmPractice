@@ -1,5 +1,8 @@
 package com.example.myapplication;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 主要针对单链表的操作
  */
@@ -345,4 +348,37 @@ public class ListTest {
             cur = cur.next;
         }
     }
+
+    /**
+     * 判断一个链表是否有环
+     * 1.HashSet 判断是否能够添加进去，添加不进去表示有环
+     * 2双指针  一个快指针   一个慢指针  如果能相遇  在表示有环
+     */
+    public boolean hasCycle(Node head){
+        Set<Node> set = new HashSet<>();
+        while (head != null){
+            if (!set.add(head)){
+                return true;
+            }
+            head = head.next;
+        }
+        return false;
+    }
+
+    public boolean hasCycle2(Node node){
+        if (node == null || node.next == null){
+            return false;
+        }
+        Node slow = node;
+        Node quick = node.next;
+        while (slow != quick){
+            if (quick == null || quick.next == null){
+                return false;
+            }
+            slow = slow.next;
+            quick = quick.next.next;
+        }
+        return true;
+    }
+
 }

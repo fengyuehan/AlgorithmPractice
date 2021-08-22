@@ -210,4 +210,112 @@ public class Array {
         return high;
     }
 
+    /**
+     * 合并两个有序数组，合并后继续成为一个有序数组
+     * 1、暴力解决，先将两个数组合并，然后排序 时间复杂度(m+n)log(m+n)
+     * 2、双指针  空间换时间 时间复杂度  m +n 这是从前往后作比较
+     * 3、双指针  从后往前作比较  这样就不需要增加空间复杂度
+     */
+    public int[] merge(int[] nums1,int m,int nums2,int n){
+        //m为两个数组长度之和
+        System.arraycopy(nums2,0,nums1,m,n);
+        Arrays.sort(nums1);
+        return nums1;
+    }
+
+    public int[] merge2(int[] nums1,int m,int[] nums2,int n){
+        //先将num保留一个副本
+        int[] num_copy = new int[m];
+        System.arraycopy(nums1,0,num_copy,0,m);
+
+        int p1 = 0;//指向num_copy
+        int p2 = 0;//指向num2
+        int p = 0; //指向num1
+
+        while (p1 < m && p2 < n){
+            nums1[p++] = num_copy[p1] < nums2[p2] ? num_copy[p1++]:nums2[p2++];
+        }
+        if (p1 < m){
+            System.arraycopy(num_copy,p1,nums1,p1 + p2,m - p1 -p2);
+        }
+        if (p2 < n){
+            System.arraycopy(num_copy,p2,nums1,p1 + p2,m - p1 -p2);
+        }
+        return nums1;
+    }
+
+    public int[] merge3(int[] nums1,int m,int[] nums2,int n){
+        int p1 = m -1;
+        int p2 = n -1;
+        int p = m + n -1;
+        while (p1 >= 0 && p2 >= 0){
+            nums1[p--] = nums1[p1] < nums2[p2] ? nums2[p2--] : nums1[p--];
+        }
+        System.arraycopy(nums2,0,nums1,0,p2 + 1);
+        return nums1;
+    }
+
+    /**
+     * 子数组最大平均数
+     * 利用滑动窗口
+     */
+    public double findMaxAverage(int[] num,int k){
+        int sum = 0;
+        for (int i = 0; i < k; i++){
+            sum += num[i];
+        }
+        int max = sum;
+        for (int i = k; i < num.length; i++){
+            sum = sum - num[i - k] + num[k];
+            max = Math.max(sum,max);
+        }
+        return 1.0 * max / k;
+    }
+
+    /**
+     * 寻找最长连续递增序列
+     * 贪心算法：局部求最优解不影响全局求最优解
+     */
+    public int findMaxLength(int[] nums){
+        int start = 0;
+        int max = 0;
+        for (int i = 1; i < nums.length; i++){
+            if (nums[i] < nums[i -1]){
+                start = i;
+            }
+            max = Math.max(max,i - start + 1);
+        }
+        return max;
+    }
+
+    /**
+     * 柠檬水找零
+     */
+    public boolean change(int[] nums){
+        int five = 0;
+        int ten = 0;
+        for (int num:nums){
+            if (num == 5){
+                five++;
+            }else if (num == 10){
+                if (five == 0){
+                    return false;
+                }
+                five--;
+                ten++;
+            }else {
+                if (five > 0 && ten < 0){
+                    five--;
+                    ten--;
+                }else if (five > 3){
+                    five -= 3;
+                }else {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
 }

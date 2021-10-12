@@ -323,4 +323,140 @@ public class Tree {
         return res;
     }
 
+    /**
+     * 二叉树的最小深度
+     * 对于一个节点，如果左子树或者右子树为空，那么最小深度为 left + right + 1
+     * 如果左子树和右子树都不为空，那么最小深度为 Math.min(left,right) + 1
+     */
+
+    public int minDeep(TreeNode node){
+        if (node == null){
+            return 0;
+        }
+        int left = minDeep(node.getLeft());
+        int right = minDeep(node.getRight());
+        return (left == 0 || right == 0) ? left + right + 1 : Math.max(left,right) + 1;
+    }
+
+    /**
+     * 平衡树
+     * 平衡树左右子树高度差都小于等于 1
+     */
+    public boolean result = true;
+    public boolean isBalance(TreeNode node){
+        maxDepth1(node);
+        return result;
+    }
+
+    public int maxDepth1(TreeNode root) {
+        if (root == null) return 0;
+        int l = maxDepth(root.getLeft());
+        int r = maxDepth(root.getRight());
+        if (Math.abs(l - r) > 1) {
+            result = false;
+        }else {
+            result = true;
+        }
+        return 1 + Math.max(l, r);
+    }
+
+    /**
+     * 两节点的最长路径
+     * 因为最长直径不一定过根节点，所以需要分别以每一个节点为中心计算最长路径。
+     * 用一个全局变量max来维护最长路径（左子树的深度+右子树的深度）。
+     * 为了计算每个子树的深度，使用深度优先遍历计算树中每一个节点的深度（max（左子树深度，右子树深度））
+     */
+
+    private int max = 0;
+
+    public int diameterOfBinaryTree(TreeNode root) {
+        depth(root);
+        return max;
+    }
+
+    private int depth(TreeNode root) {
+        if (root == null) return 0;
+        int leftDepth = depth(root.getLeft());
+        int rightDepth = depth(root.getRight());
+        max = Math.max(max, leftDepth + rightDepth);
+        return Math.max(leftDepth, rightDepth) + 1;
+    }
+
+    /**
+     * 翻转树(镜像)
+     */
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null){
+            return null;
+        }
+        TreeNode left = root.getLeft();
+        root.setLeft(invertTree(root.getRight());
+        root.setRight(invertTree(left));
+        return root;
+    }
+
+    /**
+     * 归并两棵树
+     *
+     */
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+        if (t1 == null && t2 == null){
+            return null;
+        }
+        if (t1 == null){
+            return t2;
+        }
+        if (t2 == null){
+            return t1;
+        }
+        TreeNode root = new TreeNode(t1.getValue() + t2.getValue());
+        root.setLeft(mergeTrees(t1.getLeft(),t2.getLeft()));
+        root.setRight(mergeTrees(t1.getRight(),t2.getRight()));
+        return root;
+    }
+
+    /**
+     * 判断路径和是否等于一个数
+     */
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if (root == null){
+            return false;
+        }
+        if (root.getLeft() == null && root.getRight() == null && root.getValue() == sum){
+            return true;
+        }
+        return hasPathSum(root.getLeft(),sum - root.getValue()) || hasPathSum(root.getRight(),sum - root.getValue());
+    }
+
+    /**
+     * 树的对称
+     */
+    public boolean isSymmetric(TreeNode root) {
+        if (root == null) return true;
+        return isSymmetric(root.getLeft(), root.getRight());
+    }
+
+    private boolean isSymmetric(TreeNode t1, TreeNode t2) {
+        if (t1 == null && t2 == null) return true;
+        if (t1 == null || t2 == null) return false;
+        if (t1.getValue() != t2.getValue()) return false;
+        return isSymmetric(t1.getLeft(), t2.getRight()) && isSymmetric(t1.getRight(), t2.getLeft());
+    }
+
+    /**
+     * 子树
+     */
+    public boolean isSubtree(TreeNode s, TreeNode t) {
+        if (s == null){
+            return false;
+        }
+        return isSubtreeWithRoot(s, t) || isSubtree(s.getLeft(), t) || isSubtree(s.getRight(), t);
+    }
+
+    private boolean isSubtreeWithRoot(TreeNode s, TreeNode t) {
+        if (t == null && s == null) return true;
+        if (t == null || s == null) return false;
+        if (t.getValue() != s.getValue()) return false;
+        return isSubtreeWithRoot(s.getLeft(), t.getLeft()) && isSubtreeWithRoot(s.getRight(), t.getRight());
+    }
 }

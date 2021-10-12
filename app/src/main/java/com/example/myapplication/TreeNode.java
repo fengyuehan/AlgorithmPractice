@@ -46,4 +46,8 @@ public class TreeNode {
         this.left = left;
         this.right = right;
     }
+
+    public TreeNode(int value){
+        this.value = value;
+    }
 }

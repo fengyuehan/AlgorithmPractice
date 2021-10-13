@@ -329,12 +329,12 @@ public class Tree {
      * 如果左子树和右子树都不为空，那么最小深度为 Math.min(left,right) + 1
      */
 
-    public int minDeep(TreeNode node){
+    public int minDeep3(TreeNode node){
         if (node == null){
             return 0;
         }
-        int left = minDeep(node.getLeft());
-        int right = minDeep(node.getRight());
+        int left = minDeep3(node.getLeft());
+        int right = minDeep3(node.getRight());
         return (left == 0 || right == 0) ? left + right + 1 : Math.max(left,right) + 1;
     }
 
@@ -390,7 +390,7 @@ public class Tree {
             return null;
         }
         TreeNode left = root.getLeft();
-        root.setLeft(invertTree(root.getRight());
+        root.setLeft(invertTree(root.getRight()));
         root.setRight(invertTree(left));
         return root;
     }

@@ -389,9 +389,9 @@ public class Tree {
         if (root == null){
             return null;
         }
-        TreeNode left = root.getLeft();
+        //TreeNode left = root.getLeft();
         root.setLeft(invertTree(root.getRight()));
-        root.setRight(invertTree(left));
+        root.setRight(invertTree(root.getLeft()));
         return root;
     }
 

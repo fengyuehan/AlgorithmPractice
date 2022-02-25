@@ -261,6 +261,12 @@ public class Array {
      */
     public double findMaxAverage(int[] num,int k){
         int sum = 0;
+        if (k > num.length){
+            for (int i = 0; i < num.length; i++){
+                sum += num[i];
+            }
+            return 1.0 * sum / k;
+        }
         for (int i = 0; i < k; i++){
             sum += num[i];
         }

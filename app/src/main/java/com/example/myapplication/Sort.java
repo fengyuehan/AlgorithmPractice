@@ -9,10 +9,10 @@ public class Sort {
      */
     public void BubbleSort(int[] aar){
         int n = aar.length;
-        for (int i = 0; i < n;i++){
-            for (int j = 1; j < n - i; j++){
-                if (aar[j -1] > aar[j]){
-                    swap(aar,j -1,j);
+        for (int i = 0; i < n - 1;i++){
+            for (int j = 1; j < n - i -1; j++){
+                if (aar[j ] > aar[j + 1]){
+                    swap(aar,j,j+1);
                 }
             }
         }
@@ -33,6 +33,19 @@ public class Sort {
             if (minIndex != i){
                 swap(aar,i,minIndex);
             }
+        }
+    }
+
+    public void insertSort(int[] aar){
+        int cuurent,preIndex;
+        for(int i = 1; i < aar.length;i++){
+            cuurent = aar[i];
+            preIndex = i - 1;
+            while (preIndex >= 0 && cuurent < aar[preIndex]){
+                aar[preIndex+1] = aar[preIndex];
+                preIndex--;
+            }
+            aar[preIndex + 1] = cuurent;
         }
     }
 

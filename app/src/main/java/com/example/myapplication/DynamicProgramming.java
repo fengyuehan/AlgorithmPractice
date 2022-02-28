@@ -43,7 +43,7 @@ public class DynamicProgramming {
         if (m == 1 && n == 1){
             return 1;
         }
-        int[][] dp = new int[m+1][n+1];
+        int[][] dp = new int[m][n];
         for (int i = 0;i < m;i++){
             dp[i][0] = 1;
         }
@@ -272,6 +272,75 @@ public class DynamicProgramming {
             }
         }
         return max;
+    }
+
+    /**
+     * 最大子序和
+     * 如果dp[i-1]>0，dp[i]=dp[i-1]+nums[i]；
+     * 如果dp[i-1]<=0，放弃前面的和，dp[i]=nums[i]。
+     */
+
+    public int maxSubArray(int[] nums) {
+        if (nums.length == 1){
+            return nums[0];
+        }
+        int max = nums[0];
+        int sum = 0;
+        for (int n:nums){
+            if (sum < 0){
+                sum = n;
+            }else {
+                sum += n;
+            }
+            max = Math.max(max,sum);
+        }
+        return max;
+
+    }
+
+    /**
+     * 最小路径和
+     * 状态转移方程：
+     * dp[i][j]=min(dp[i-1][j],dp[i][j-1])+grid[i][j]。
+     *
+     * 初始条件：
+     * dp[0][0]=grid[0][0];
+     * dp[■][0]=dp[■-1][0]+grid[■][0]；
+     * dp[0][■]=dp[0][■-1]+grid[0][■]
+     *
+     * 返回值：
+     * dp[m-1][n-1]
+     */
+    public int minPathSum(int[][] grid) {
+        int m = grid.length;//行
+        int n = grid[0].length;//列
+        int dp[][] = new int[][]{};
+        dp[0][0] = grid[0][0];
+        for (int i = 0; i < m;i++){
+            dp[i][0] = dp[i-1][0] + grid[i][0];
+        }
+        for(int j=1;j<n;j++){
+            dp[0][j]=dp[0][j-1]+grid[0][j];
+        }
+        for(int i=1;i<m;i++){
+            for(int j=1;j<n;j++){
+                dp[i][j]=Math.min(dp[i-1][j],dp[i][j-1])+grid[i][j];
+            }
+        }
+        return dp[m-1][n-1];
+    }
+
+    /**
+     * 不同的二叉搜索树
+     *
+     */
+    public int numTrees(int n) {
+        // 提示：我们在这里需要用 long 类型防止计算过程中的溢出
+        long C = 1;
+        for (int i = 0; i < n; ++i) {
+            C = C * 2 * (2 * i + 1) / (i + 2);
+        }
+        return (int) C;
     }
 
 }

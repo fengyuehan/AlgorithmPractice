@@ -1,0 +1,365 @@
+Index: .idea/inspectionProfiles/Project_Default.xml
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+deleted file mode 100644
+--- a/.idea/inspectionProfiles/Project_Default.xml	(revision 69fabe849f598fc69b6b8e913821d387f35d8ea7)
++++ /dev/null	(revision 69fabe849f598fc69b6b8e913821d387f35d8ea7)
+@@ -1,10 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <profile version="1.0">
+-    <option name="myName" value="Project Default" />
+-    <inspection_tool class="ConstantConditions" enabled="true" level="WARNING" enabled_by_default="true">
+-      <option name="SUGGEST_NULLABLE_ANNOTATIONS" value="false" />
+-      <option name="DONT_REPORT_TRUE_ASSERT_STATEMENTS" value="false" />
+-      <option name="REPORT_CONSTANT_REFERENCE_VALUES" value="false" />
+-    </inspection_tool>
+-  </profile>
+-</component>
+\ No newline at end of file
+Index: .idea/codeStyles/Project.xml
+===================================================================
+diff --git a/.idea/codeStyles/Project.xml b/.idea/codeStyles/Project.xml
+deleted file mode 100644
+--- a/.idea/codeStyles/Project.xml	(revision 69fabe849f598fc69b6b8e913821d387f35d8ea7)
++++ /dev/null	(revision 69fabe849f598fc69b6b8e913821d387f35d8ea7)
+@@ -1,134 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <code_scheme name="Project" version="173">
+-    <JetCodeStyleSettings>
+-      <option name="PACKAGES_TO_USE_STAR_IMPORTS">
+-        <value>
+-          <package name="java.util" alias="false" withSubpackages="false" />
+-          <package name="kotlinx.android.synthetic" alias="false" withSubpackages="true" />
+-          <package name="io.ktor" alias="false" withSubpackages="true" />
+-        </value>
+-      </option>
+-      <option name="PACKAGES_IMPORT_LAYOUT">
+-        <value>
+-          <package name="" alias="false" withSubpackages="true" />
+-          <package name="java" alias="false" withSubpackages="true" />
+-          <package name="javax" alias="false" withSubpackages="true" />
+-          <package name="kotlin" alias="false" withSubpackages="true" />
+-          <package name="" alias="true" withSubpackages="true" />
+-        </value>
+-      </option>
+-    </JetCodeStyleSettings>
+-    <codeStyleSettings language="XML">
+-      <indentOptions>
+-        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+-      </indentOptions>
+-      <arrangement>
+-        <rules>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:android</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:id</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>style</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>ANDROID_ATTRIBUTE_ORDER</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>.*</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-        </rules>
+-      </arrangement>
+-    </codeStyleSettings>
+-  </code_scheme>
+-</component>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 69fabe849f598fc69b6b8e913821d387f35d8ea7)
++++ /dev/null	(revision 69fabe849f598fc69b6b8e913821d387f35d8ea7)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: app/src/main/java/com/example/myapplication/GreedyAlgorithm.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapplication/GreedyAlgorithm.java b/app/src/main/java/com/example/myapplication/GreedyAlgorithm.java
+new file mode 100644
+--- /dev/null	(date 1645939126819)
++++ b/app/src/main/java/com/example/myapplication/GreedyAlgorithm.java	(date 1645939126819)
+@@ -0,0 +1,23 @@
++package com.example.myapplication;
++
++import android.view.View;
++import android.view.ViewGroup;
++
++/**
++ * 贪心算法
++ */
++
++public class GreedyAlgorithm {
++
++    /**
++     * 分发饼干
++     * ch
++     */
++    private void findContentChildren(int[] child, int[] s){
++
++    }
++
++
++
++
++}
+Index: app/src/main/java/com/example/myapplication/StackType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapplication/StackType.java b/app/src/main/java/com/example/myapplication/StackType.java
+new file mode 100644
+--- /dev/null	(date 1636545894763)
++++ b/app/src/main/java/com/example/myapplication/StackType.java	(date 1636545894763)
+@@ -0,0 +1,79 @@
++package com.example.myapplication;
++
++import java.util.HashMap;
++import java.util.Map;
++import java.util.Stack;
++
++public class StackType {
++    /**
++     * 每日温度
++     * 请根据每日 气温 列表，重新生成一个列表。对应位置的输出为：要想观测到更高的气温，至少需要等待的天数。如果气温在这之后都不会升高，请在该位置用 0 来代替。
++     *
++     * 例如，给定一个列表 temperatures = [73, 74, 75, 71, 69, 72, 76, 73]，你的输出应该是 [1, 1, 4, 2, 1, 1, 0, 0]。
++     *
++     */
++    //暴力解法
++    public int[] dailyTemperature(int[] T){
++        int length = T.length;
++        int[] result = new int[length];
++
++        for (int  i = 0; i < length; i ++){
++            for (int j = i + 1; j < length;j++){
++                if (T[j] > T[i]){
++                    result[i] = j - i;
++                    break;
++                }
++            }
++        }
++        return result;
++    }
++
++    //使用栈
++    public int[] dailyTemperatureForStack(int[] T){
++        int length = T.length;
++        int[] result = new int[length];
++
++        Stack<Integer> stack = new Stack();
++        for (int i = 0; i < length;i++){
++            int temp = T[i];
++            while (!stack.isEmpty() && temp > T[stack.peek()]){
++                int preIndex = stack.pop();
++                result[preIndex] = i - preIndex;
++            }
++            stack.push(i);
++        }
++        return result;
++    }
++
++    /**
++     * 有效的括号
++     * 括号闭合类型不匹配
++     * 有剩余的无法抵消的左括号
++     * 有无法抵消的右括号/先出现右括号
++     */
++    public boolean isValid(String s){
++        Stack<Character> stack = new Stack<>();
++        for (int i = 0; i < s.length();i++){
++            if (s.charAt(i) == '(' || s.charAt(i) == '[' || s.charAt(i) == '{'){
++                stack.push(s.charAt(i));
++            }else {
++                if (stack.isEmpty()){
++                    return false;
++                }
++                if (s.charAt(i) == ')' && stack.pop() != '('){
++                    return false;
++                }
++                if (s.charAt(i) == ']' && stack.pop() != '['){
++                    return false;
++                }
++                if (s.charAt(i) == '}' && stack.pop() != '{'){
++                    return false;
++                }
++            }
++        }
++        
++        return stack.isEmpty();
++    }
++
++
++}
+Index: app/src/main/java/com/example/myapplication/Array.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.myapplication;\r\n\r\nimport android.os.Build;\r\n\r\nimport androidx.annotation.RequiresApi;\r\n\r\nimport java.util.Arrays;\r\nimport java.util.HashMap;\r\nimport java.util.Map;\r\n\r\n/**\r\n * 数组相关\r\n */\r\npublic class Array {\r\n    /**\r\n     * 原地删除数组中的重复元素\r\n     */\r\n    /**\r\n     * 双指针法,针对排序好的\r\n     *\r\n     */\r\n    public int removeSame(int[] nums){\r\n        if (nums.length == 0){\r\n            return 0;\r\n        }\r\n        int i = 0;\r\n        /**\r\n         * 不相等则将赋值，相等则进行下一次循环，调过这次\r\n         */\r\n        for (int j = 1; j < nums.length; j++){\r\n            if (nums[j] != nums[i]){\r\n                i++;\r\n                nums[i] = nums[j];\r\n            }\r\n        }\r\n        return i+1;\r\n    }\r\n\r\n    /**\r\n     * 寻找数组的中心下标\r\n     *\r\n     * 中心坐标左侧的所有元素的值与右边左右的值相等\r\n     *\r\n     * 采用双指针，一个指针从前面累加，一个指针从末尾相减，看能不能找到一个位置，使两个指针重合\r\n     */\r\n    @RequiresApi(api = Build.VERSION_CODES.N)\r\n    public int centerInde(int[] nums){\r\n        int sum = Arrays.stream(nums).sum();\r\n        int total = 0;\r\n        for (int i = 0; i < nums.length; i++){\r\n            total += nums[i];\r\n            if (total == sum){\r\n                return i;\r\n            }\r\n            sum = sum - nums[i];\r\n        }\r\n        return -1;\r\n    }\r\n\r\n    /**\r\n     * x的平方根\r\n     *\r\n     * 二分法（在一个区见寻找一个数）\r\n     * 牛顿迭代(n^2 = x  n = x / n  一直求 n 和 x/n 的平均值，就会无限接近)\r\n     */\r\n    public int binarySearch(int x){\r\n        int low = 0;\r\n        int high = x;\r\n        while (low < high){\r\n            int middle = low + (high - low) /2;\r\n            if (middle * middle == x){\r\n                return middle;\r\n            }else if (middle * middle < x){\r\n                low = middle + 1;\r\n            }else {\r\n                high = middle -1;\r\n            }\r\n        }\r\n        return -1;\r\n    }\r\n\r\n    public double sqrt(double i, int x){\r\n        double res = (i + x / i)/2;\r\n        if (res == i){\r\n            return i;\r\n        }else {\r\n            return sqrt(res,x);\r\n        }\r\n    }\r\n\r\n    /**\r\n     * 三个数的最大乘积\r\n     * 先排序，然后取绝对值最大的三个数\r\n     * 线性扫描\r\n     */\r\n\r\n    public int getMax1(int[] nums){\r\n        Arrays.sort(nums);\r\n        int n = nums.length;\r\n        return Math.max(nums[0] * nums[1]*nums[n-1],nums[n-1] * nums[n -2] * nums[n -3]);\r\n    }\r\n\r\n    public int getMax2(int[] nums){\r\n        int min1 = Integer.MAX_VALUE,min2 = Integer.MAX_VALUE;\r\n        int max1 = Integer.MIN_VALUE,max2 = Integer.MAX_VALUE,max3 = Integer.MIN_VALUE;\r\n        for (int x:nums){\r\n            if (x < min1){\r\n                min2 = min1;\r\n                min1 = x;\r\n            }else if (x < min2){\r\n                min2 = x;\r\n            }\r\n            if (x > max1){\r\n                max3 = max2;\r\n                max2 = max1;\r\n                max1 = x;\r\n            }else if (x > max2){\r\n                max3 = max2;\r\n                max2 = x;\r\n            }else if (x > max3){\r\n                max3 = x;\r\n            }\r\n        }\r\n        return Math.max(min1 * min2 * max1 ,max1 * max2 * max3);\r\n    }\r\n\r\n    /**\r\n     * 两个数之和\r\n     * 乱序\r\n     * 1、暴力解决   复杂度  O（n^2）\r\n     * 2、map   复杂度  O（N）  空间复杂度   O（n）\r\n     * （针对有序的数组）\r\n     * 3、二分查找法    复杂度  O（n*log(n)）\r\n     * 4、双指针  复杂度为o(n)\r\n     */\r\n    public int[] sum(int[] nums,int target){\r\n        Map<Integer,Integer> map = new HashMap<>();\r\n        for (int i = 0; i < nums.length; i++){\r\n            if (map.containsKey(target  - nums[i])){\r\n                return new int[]{map.get(target - nums[i]),i};\r\n            }\r\n            map.put(nums[i],i);\r\n        }\r\n        return new int[]{0};\r\n    }\r\n    /**\r\n     * 升序排列数组\r\n     */\r\n    public int[] sum2(int[] nums,int taget){\r\n        for (int i = 0; i < nums.length; i++){\r\n            int low = i,high = nums.length - 1;\r\n            while (low <= high){\r\n                int middle = low + (high - low)/2;\r\n                if (nums[middle] == taget){\r\n                    return new int[]{i,middle};\r\n                }else if (nums[middle] > taget){\r\n                    high = middle -1;\r\n                }else if (nums[middle] < taget){\r\n                    low = middle + 1;\r\n                }\r\n            }\r\n        }\r\n        return new int[]{};\r\n    }\r\n\r\n    public int[] twoPoint(int[] nums,int target){\r\n        int low = 0,high = nums.length -1;\r\n        while (low <= high){\r\n            int sum = nums[low] + nums[high];\r\n            if (sum == target){\r\n                return new int[]{low,high};\r\n            }else if (sum < target){\r\n                low ++;\r\n            }else if (sum > target){\r\n                high--;\r\n            }\r\n        }\r\n\r\n        return new int[]{};\r\n    }\r\n\r\n    /**\r\n     * 排列硬币\r\n     * 1、迭代方法\r\n     * 2、二分查找\r\n     */\r\n    public int arrangeCoin(int n){\r\n        for (int i = 1; i <= n; i++){\r\n            n = n - i;\r\n            if (n <= i){\r\n                return i;\r\n            }\r\n        }\r\n        return 0;\r\n    }\r\n\r\n    public int arrangeCoin2(int n){\r\n        int low = 0,high = n;\r\n        while (low <= high){\r\n            int mid = low + (high - low) /2;\r\n            int sum = ((mid + 1) * mid) /2;\r\n            if (sum == n){\r\n                return mid;\r\n            }else if (sum < n){\r\n                low++;\r\n            }else {\r\n                high--;\r\n            }\r\n        }\r\n        return high;\r\n    }\r\n\r\n    /**\r\n     * 合并两个有序数组，合并后继续成为一个有序数组\r\n     * 1、暴力解决，先将两个数组合并，然后排序 时间复杂度(m+n)log(m+n)\r\n     * 2、双指针  空间换时间 时间复杂度  m +n 这是从前往后作比较\r\n     * 3、双指针  从后往前作比较  这样就不需要增加空间复杂度\r\n     */\r\n    public int[] merge(int[] nums1,int m,int nums2,int n){\r\n        //m为两个数组长度之和\r\n        System.arraycopy(nums2,0,nums1,m,n);\r\n        Arrays.sort(nums1);\r\n        return nums1;\r\n    }\r\n\r\n    public int[] merge2(int[] nums1,int m,int[] nums2,int n){\r\n        //先将num保留一个副本\r\n        int[] num_copy = new int[m];\r\n        System.arraycopy(nums1,0,num_copy,0,m);\r\n\r\n        int p1 = 0;//指向num_copy\r\n        int p2 = 0;//指向num2\r\n        int p = 0; //指向num1\r\n\r\n        while (p1 < m && p2 < n){\r\n            nums1[p++] = num_copy[p1] < nums2[p2] ? num_copy[p1++]:nums2[p2++];\r\n        }\r\n        if (p1 < m){\r\n            System.arraycopy(num_copy,p1,nums1,p1 + p2,m - p1 -p2);\r\n        }\r\n        if (p2 < n){\r\n            System.arraycopy(num_copy,p2,nums1,p1 + p2,m - p1 -p2);\r\n        }\r\n        return nums1;\r\n    }\r\n\r\n    public int[] merge3(int[] nums1,int m,int[] nums2,int n){\r\n        int p1 = m -1;\r\n        int p2 = n -1;\r\n        int p = m + n -1;\r\n        while (p1 >= 0 && p2 >= 0){\r\n            nums1[p--] = nums1[p1] < nums2[p2] ? nums2[p2--] : nums1[p--];\r\n        }\r\n        System.arraycopy(nums2,0,nums1,0,p2 + 1);\r\n        return nums1;\r\n    }\r\n\r\n    /**\r\n     * 子数组最大平均数\r\n     * 利用滑动窗口\r\n     */\r\n    public double findMaxAverage(int[] num,int k){\r\n        int sum = 0;\r\n        for (int i = 0; i < k; i++){\r\n            sum += num[i];\r\n        }\r\n        int max = sum;\r\n        for (int i = k; i < num.length; i++){\r\n            sum = sum - num[i - k] + num[k];\r\n            max = Math.max(sum,max);\r\n        }\r\n        return 1.0 * max / k;\r\n    }\r\n\r\n    /**\r\n     * 寻找最长连续递增序列\r\n     * 贪心算法：局部求最优解不影响全局求最优解\r\n     */\r\n    public int findMaxLength(int[] nums){\r\n        int start = 0;\r\n        int max = 0;\r\n        for (int i = 1; i < nums.length; i++){\r\n            if (nums[i] < nums[i -1]){\r\n                start = i;\r\n            }\r\n            max = Math.max(max,i - start + 1);\r\n        }\r\n        return max;\r\n    }\r\n\r\n    /**\r\n     * 柠檬水找零\r\n     */\r\n    public boolean change(int[] nums){\r\n        int five = 0;\r\n        int ten = 0;\r\n        for (int num:nums){\r\n            if (num == 5){\r\n                five++;\r\n            }else if (num == 10){\r\n                if (five == 0){\r\n                    return false;\r\n                }\r\n                five--;\r\n                ten++;\r\n            }else {\r\n                if (five > 0 && ten < 0){\r\n                    five--;\r\n                    ten--;\r\n                }else if (five > 3){\r\n                    five -= 3;\r\n                }else {\r\n                    return false;\r\n                }\r\n            }\r\n        }\r\n        return true;\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapplication/Array.java b/app/src/main/java/com/example/myapplication/Array.java
+--- a/app/src/main/java/com/example/myapplication/Array.java	(revision 69fabe849f598fc69b6b8e913821d387f35d8ea7)
++++ b/app/src/main/java/com/example/myapplication/Array.java	(date 1636528161108)
+@@ -317,5 +317,21 @@
+         return true;
+     }
+ 
++    /**
++     * 两数之和
++     */
++    public int[] twoSum(int[] nums,int target){
++        int[] res = new int[2];
++        HashMap<Integer,Integer> map = new HashMap<>();
++        for (int i = 0; i < nums.length;i++){
++            if (map.containsKey(target - nums[i])){
++                res[0] = map.get(target - nums[i]);
++                res[1] = i;
++            }
++            map.put(nums[i],i);
++        }
++        return res;
++    }
++
+ 
+ }
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"GRADLE\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"11\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	(revision 69fabe849f598fc69b6b8e913821d387f35d8ea7)
++++ b/.idea/gradle.xml	(date 1645938986564)
+@@ -7,7 +7,7 @@
+         <option name="testRunner" value="GRADLE" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="gradleJvm" value="11" />
++        <option name="gradleJvm" value="1.8 (2)" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_8\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 69fabe849f598fc69b6b8e913821d387f35d8ea7)
++++ b/.idea/misc.xml	(date 1636527820683)
+@@ -1,9 +1,4 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/build/classes" />
+-  </component>
+-  <component name="ProjectType">
+-    <option name="id" value="Android" />
+-  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file

@@ -203,7 +203,7 @@ public class ListTest {
         }
         Node fast = node;
         //构建n+1的窗口
-        for (int i = 0; i < n;i++){
+        for (int i = 0; i <= n;i++){
             if (fast.next != null){
                 fast = fast.next;
             }else {
@@ -380,5 +380,9 @@ public class ListTest {
         }
         return true;
     }
+
+
+
+
 
 }

@@ -62,5 +62,30 @@ public class Sort {
         arr[j] = temp;
     }
 
+    /**
+     * 快排
+     */
+    private void quickSort(int[] arr,int low,int high){
+        int pivot = part(arr,low,high);
+        quickSort(arr,low,pivot-1);
+        quickSort(arr,pivot+1,high);
+    }
+
+    private int part(int[] arr,int low,int high){
+        int pre = arr[low];
+        while (low < high){
+            while (low < high && arr[high] >= pre){
+                high--;
+            }
+            arr[low] = arr[high];
+            while (low < high && arr[low] <= pre){
+                low++;
+            }
+            arr[high] = arr[low];
+        }
+        arr[low] = pre;
+        return low;
+    }
+
 
 }

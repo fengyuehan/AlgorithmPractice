@@ -12,6 +12,48 @@ public class DynamicProgramming {
      *
      */
 
+
+    /**
+     * 给定一个字符串s和一个字符串t，计算在s的子序列中t出现的个数。
+     * 输入：s = "ra b b b i t", t = "ra b b i t"
+     * 输出：3
+     * 解释：
+     * 如下图所示, 有3种可以从s中得到"ra b b i t"的方案。
+     * ra b bbi t
+     * ra bbb i t
+     * rabb b i t
+     */
+    /**
+     * dp[i][ j]表示t的前i个字符可以由s的前j个字符组成的个数
+     */
+
+    public int numDistinct(String s,String t){
+        int sLength = s.length();
+        int tLength = t.length();
+        int[][] dp = new int[tLength + 1][sLength + 1];
+
+        for (int i = 0;i <= sLength;i++){
+            //表示字符串t为“”,它是s中的任何一个
+            dp[0][i] = 1;
+        }
+        for (int i = 1; i <= tLength;i++){
+            for (int j = 1; j <= sLength;j++){
+                if (t.charAt(i -1) == s.charAt(j-1)){
+                    //如果字符串t的第i个字符和s的第j个字符一样，
+                    //那有两种选择
+                    dp[i][j] = dp[i - 1][j - 1] + dp[i][j - 1];
+                }else {
+                    //如果字符串t的第i个字符和s的第j个字符不一样，
+                    //我们只能用字符串s的前j-1个字符来计算他包含的数量
+                    dp[i][j] = dp[i][j - 1];
+
+                }
+            }
+        }
+        return dp[tLength][sLength];
+    }
+
+
     /**
      * 爬楼梯问题：
      * 思路：如果最后一步爬1步，这种情况下有f(n-1)种方法。

@@ -339,5 +339,29 @@ public class Array {
         return res;
     }
 
+    /**
+     * 如果是未排序好的，则会报错
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSum1(int[] nums,int target){
+        int min = 0;
+        int max = nums.length;
+        int[] res = new int[2];
+        while (min < max){
+            if (nums[min] + nums[max] == target){
+                res[0] = min;
+                res[1] = max;
+                return res;
+            }else if (nums[min] + nums[max] <= target){
+                min ++;
+            }else {
+                max--;
+            }
+        }
+        return res;
+    }
+
 
 }

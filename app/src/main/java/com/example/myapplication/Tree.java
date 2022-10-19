@@ -93,6 +93,9 @@ public class Tree {
         if (node == null){
             return;
         }
+        if (list == null){
+            list = new ArrayList<>();
+        }
         list.add(node.getValue());
         robot(node.getLeft(),list);
         robot(node.getRight(),list);

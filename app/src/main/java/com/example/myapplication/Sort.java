@@ -19,6 +19,24 @@ public class Sort {
     }
 
     /**
+     * 优化
+     */
+    public void BubbleSort1(int[] aar){
+        for (int i = aar.length - 1; i>0 ; i--){
+            boolean isBreak = false;
+            for (int j = 0; j < i; j++){
+                if (aar[j] > aar[j+1]){
+                    swap(aar,j,j+1);
+                    isBreak = true;
+                }
+            }
+            if (!isBreak){
+                break;
+            }
+        }
+    }
+
+    /**
      * 选择排序
      */
     public void SelectSort(int[] aar){
@@ -36,7 +54,7 @@ public class Sort {
         }
     }
 
-    public void insertSort(int[] aar){
+    public static int[] insertSort(int[] aar){
         int cuurent,preIndex;
         for(int i = 1; i < aar.length;i++){
             cuurent = aar[i];
@@ -47,6 +65,32 @@ public class Sort {
             }
             aar[preIndex + 1] = cuurent;
         }
+        return aar;
+    }
+
+    public void insert(int[] aar){
+        for (int i = 1; i < aar.length;i++){
+            int insertIndex = i;
+            int insertValue = aar[i];
+            while (insertIndex > 0 && insertValue < aar[insertIndex - 1]){
+                aar[insertIndex] = aar[insertIndex-1];
+                insertIndex--;
+            }
+            aar[insertIndex-1] = insertValue;
+        }
+    }
+
+    public static String toString(int[] arr){
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < arr.length;i++){
+            sb.append(arr[i]).append("---");
+        }
+        return sb.toString();
+    }
+
+    public static void main(String[] args){
+        int[] a = {3,9,1,7};
+        System.out.println(toString(insertSort(a)));
     }
 
 

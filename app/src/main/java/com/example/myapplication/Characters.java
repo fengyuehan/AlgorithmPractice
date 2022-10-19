@@ -458,7 +458,8 @@ public class Characters {
 
     public char FirstAppearingOnce(){
         if(list.isEmpty())
-            return '#';for(Character c:list){
+            return '#';
+        for(Character c:list){
             if(map.get(c)==1)
                 return c;
         }

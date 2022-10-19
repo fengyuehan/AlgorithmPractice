@@ -1,7 +1,5 @@
 package com.example.myapplication;
 
-import android.util.Printer;
-
 public class ThreadDemo {
     private volatile int number = 1;
     private volatile int value = 1;

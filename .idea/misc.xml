@@ -4,6 +4,15 @@
     <asm skipDebug="true" skipFrames="true" skipCode="false" expandFrames="false" />
     <groovy codeStyle="LEGACY" />
   </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/86153/Desktop/AlgorithmPractice/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/86153/Desktop/AlgorithmPractice/app/src/main/res/drawable/seekbar_layerlist.xml" value="0.1845" />
+        <entry key="..\:/Users/86153/Desktop/AlgorithmPractice/app/src/main/res/layout/activity_main.xml" value="0.25833333333333336" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

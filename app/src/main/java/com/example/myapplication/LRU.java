@@ -16,6 +16,7 @@ public class LRU {
         };
     }
 
+
     public int get(int key){
         return map.containsKey(key) ? map.get(key):-1;
     }
